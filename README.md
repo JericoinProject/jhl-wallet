@@ -136,9 +136,4 @@ $ jhl-wallet reveal-seed
 Account prv key: 0x843844a23e3ae7b6a695a346c981484b554ff1718299b0b42df3045f04b94f05
 ```
 
-## GUI
-
-For the testing purpose, an additionally GUI is available. 
-However, it is not recommended to use since GUI doesn't provide full functionality.
-Run `jhl_wallet/ui/gui.py` to launch the GUI application.
 
