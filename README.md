@@ -6,14 +6,14 @@ Command line wallet for Jericoin and ERC20 tokens.
 -- Python 3.6.9
 -- GCC 8.4.0
 ## Installation
-1. Clone this repository
-2. Navigate to the project's root dir
-2. Set virtual environment
-	$ python3 -m venv venv
-	$ source venv/bin/activate
-	$ (venv) pip install --upgrade pip setuptools
-	$ (venv) pip install .
-4. Run `jhl-wallet --help` 
+1. Clone this repository<br>
+2. Navigate to the project's root dir<br>
+2. Set virtual environment<br>
+	$ python3 -m venv venv<br>
+	$ source venv/bin/activate<br>
+	$ (venv) pip install --upgrade pip setuptools<br>
+	$ (venv) pip install .<br>
+4. Run `jhl-wallet --help` <br>
  
 ## Usage
 
