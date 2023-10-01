@@ -11,8 +11,8 @@ Command line wallet for Jericoin and ERC20 tokens.
 2. Set virtual environment
 	$ python3 -m venv venv
 	$ source venv/bin/activate
-	$(venv) pip install --upgrade pip setuptools
-	$(venv) pip install .
+	$ (venv) pip install --upgrade pip setuptools
+	$ (venv) pip install .
 4. Run `jhl-wallet --help` 
  
 ## Usage
