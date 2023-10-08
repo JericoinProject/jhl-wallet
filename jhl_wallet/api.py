@@ -101,7 +101,7 @@ class WalletAPI:
         """
         Get balance from account address.
         :param configuration: loaded configuration file instance
-        :param token_symbol: None for ETH, ERC20 symbol for other tokens
+        :param token_symbol: None for JHL, ERC20 symbol for other tokens
         :return:
         """
         wallet_address = Wallet(configuration).get_address()
@@ -129,8 +129,8 @@ class WalletAPI:
         :param configuration: loaded configuration file instance
         :param keystore_password: password from encrypted keystore with private key for transaction sign
         :param to_address: address in hex string where originator's funds will be sent
-        :param value: amount of funds to send in ETH or token defined in token_symbol
-        :param token_symbol: None for ETH, ERC20 symbol for other tokens transaction
+        :param value: amount of funds to send in JHL or token defined in token_symbol
+        :param token_symbol: None for JHL, ERC20 symbol for other tokens transaction
         :param gas_price_speed: gas price will be multiplied with this number to speed up transaction
         :return: tuple of transaction hash and transaction cost
         """
@@ -148,7 +148,7 @@ class WalletAPI:
         except ValueError:
             raise InvalidValueException()
 
-        if token_symbol is None:  # create ETH transaction dictionary
+        if token_symbol is None:  # create JHL transaction dictionary
             tx_dict = transaction.build_transaction(
                 to_address=to_address,
                 value=Web3.toWei(value, "ether"),
@@ -223,11 +223,7 @@ class WalletAPI:
             print('### Failed. ###')
         else:
             print('*** Done. ***')
-            nonce=w3.eth.getTransactionCount(wallet.get_address())
-            filename = os.path.expanduser("~")
-            with open(filename + '/.jhl-wallet/.tx.{}'.format(nonce),'w') as f:
-                tx_dict = dict(txn_receipt)
-                json.dump(tx_dict,f,indent=2,cls=HexJsonEncoder)
+            
             return tx_hash, transaction_const_eth
 
 
