@@ -202,7 +202,7 @@ class TransactionPage(Page):
         Send transaction
         :return:
         """
-        if token == 'ETH':
+        if token == 'JHL':
             tx_thread = TransactionThread(configuration=self.configuration,
                                           password=password,
                                           to=to,
