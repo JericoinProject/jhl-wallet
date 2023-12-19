@@ -63,15 +63,15 @@ Balance on address 0xB1f761734F00d1D368Ce6f82F755bBb3005538EB is: 1.234JHL
 Add new ERC20 contract:
 ```
 $ jhl-wallet add-token
-  Contract address []: 0x70a68593BAfc497AC4F24Eaf13CF68E74135bA42
-  Token symbol []: ZRX
+  Contract address []: 0xa84a9dCd6CA401Ba5D56276790231550f76b828f
+  Token symbol []: WJHL
   
-New coin was added! ZRX 0x70a68593BAfc497AC4F24Eaf13CF68E74135bA42
+New coin was added! WJHL 0xa84a9dCd6CA401Ba5D56276790231550f76b828f
 ```
 Get balance of ERC20 token:
 ```
-$ jhl-wallet get-balance --token ZRX
-Balance on address 0xB1f761734F00d1D368Ce6f82F755bBb3005538EB is: 0.0ZRX
+$ jhl-wallet get-balance --token WJHL
+Balance on address 0xB1f761734F00d1D368Ce6f82F755bBb3005538EB is: 0.0WJHL
 ```
 
 ### Transactions
@@ -91,12 +91,12 @@ Transaction cost was: 0.00042JHL
 
 Send ERC20 contract tokens to another wallet
 ```
-$ jhl-wallet send-transaction --token FIT
+$ jhl-wallet send-transaction --token WJHL
   To address: []: 0xAAD533eb7Fe7F2657960AC7703F87E10c73ae73b
   Value to send: []: 0.9
   Password from keystore:
  
-transaction: {'to': '0x19896cB57Bc5B4cb92dbC7D389DBa6290AF505Ce', 'value': 0, 'gas': 36536, 'gasPrice': 20000000000, 'nonce': 2, 'chainId': 707007, 'data': '0xa9059cbb000000000000000000000000aad533eb7fe7f2657960ac7703f87e10c73ae73b0000000000000000000000000000000000000000000000000c7d713b49da0000'}
+transaction: {'to': '0x19896cB57Bc5B4cb92dbC7D389DBa6290AF505Ce', 'value': 0, 'gas': 36536, 'gasPrice': 20000000000, 'nonce': 2, 'chainId': 707007, 'data': '0xa9059cbb000000000000000000000000a84a9dCd6CA401Ba5D56276790231550f76b828f0000000000000000000000000000000000000000000000000c7d713b49da0000'}
 
 Transaction validated!
 Hash of the transaction: 0x118556d192c2efb13ade6ccc2f18a631e14256972af9f7ec8a67067aaafc978c
@@ -113,7 +113,7 @@ List all added tokens:
 ```
 $ jhl-wallet list-tokens
 JHL
-ZRX
+WJHL
 ```
 Restore wallet:
 ```
@@ -133,7 +133,5 @@ Reveal wallet master private key:
 $ jhl-wallet reveal-seed   
   Password from keystore: 
   
-Account prv key: 0x843844a23e3ae7b6a695a346c981484b554ff1718299b0b42df3045f04b94f05
+Account prv key: 0x843844a23e3ae7b6a695a346c981484b554ff1718299b0b42df3045
 ```
-
-
